@@ -1,0 +1,33 @@
+ALGORITHM algorithm_name
+VAR
+    tab1[1,8,10,13]
+    tab2[8,10,5,3,20]
+
+BEGIN
+     
+     for i from o to tab1.length-1 DO
+     found:=false
+       for j from o to tab2.length-1 DO
+       if(tab1[i]= tab2[j])THEN
+       found:=true
+       END_IF 
+       END_FOR
+       IF (found=false) THEN
+           sum: =sum + tab1[i]
+       END_IF
+    END_FOR
+
+     for i from o to tab2.length-1 DO
+     found:=false
+       for j from o to tab1.length-1 DO
+       if(tab1[i]= tab2[j])THEN
+       found:=true
+       END_IF 
+       END_FOR
+       IF (found=false) THEN
+           sum: =sum + tab2[i]
+       END_IF
+    END_FOR
+    
+
+END
